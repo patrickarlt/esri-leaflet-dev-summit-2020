@@ -544,9 +544,7 @@ dog.ageInDogYears(dog.age);
 ## JavaScript Patterns
 
 <aside class="notes">
-(Pat)
-
-@TODO review
+Pat
 </aside>
 
 ---
@@ -561,12 +559,10 @@ dog.ageInDogYears(dog.age);
 * This is the "Event Loop"
 * "Callback functions" define thing that happen *later*
 
-[Event Loop and Callbacks Demo](http://jsbin.com/bezusuk/edit?js,console)
+[Event Loop and Callbacks Demo](https://codepen.io/patrickarlt/pen/eYNGjVJ?editors=0010)
 
 <aside class="notes">
-(Pat)
-
-@TODO review, clone demo to new url
+Pat
 </aside>
 
 ---
@@ -598,12 +594,10 @@ Promises represent values that will be set in the future.
 
 i.e. _I `Promise` to be a useful value in the future._
 
-[Demo](http://jsbin.com/qisiki/edit?js,console)
+[Demo](https://codepen.io/patrickarlt/pen/XWbeBEj?editors=0010)
 
 <aside class="notes">
 (Pat)
-
-@TODO review, clone demo to new URL
 </aside>
 
 ---
@@ -612,24 +606,13 @@ i.e. _I `Promise` to be a useful value in the future._
 
 ### The [DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model) and HTML
 
-* select elements (HTML tags)
-* listen for events & interaction
-* change elements
+JavaScript can interact with your HTML. The HTML on your page is represented by the DOM (**D**ocument **O**bject **M**odel).
 
-```html
-<button id="button">Click Me!</button>
-```
+* Select HTML elements
+* Listen for events & user interactions
+* Change HTML elements 
 
-```js
-let button = document.getElementById('button');
-
-button.addEventListener('click', function () {
-  console.log('The button was clicked'); // prints value to dev tools console
-  debugger; // pauses application code, starts dev tools debugger
-});
-```
-
-[Demo](https://stackblitz.com/edit/js-5dkvb8)
+[Demo](https://stackblitz.com/edit/js-8kewfg)
 
 ---
 
@@ -638,17 +621,15 @@ button.addEventListener('click', function () {
 ### [JavaScript Modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)
 
 ```
-import { something } from 'some-module';
+import { something } from 'some-file.js';
 ```
 
-This is the future: as you learn JavaScript, you will encounter this more often.
+The future! You will encounter this more often.
 
-[Demo](https://stackblitz.com/edit/js-7duku9)
+[Demo](https://stackblitz.com/edit/js-jczbky)
 
 <aside class="notes">
 (Pat)
-
-@TODO review, clone demo to new URL
 </aside>
 
 ---
@@ -668,24 +649,20 @@ require([
 
 `require` is a fancy way of adding `<script>` tags to load code on demand.
 
-[Demo](https://jsbin.com/hococib/edit?html,js,output)
+[Demo](https://codepen.io/patrickarlt/pen/PoqJBrg)
 
 <aside class="notes">
 (Pat)
-
-@TODO review, clone demo to new URL
 </aside>
 
 ---
 
-### <a href="http://jsbin.com/gixaro/13/edit?html,output">Lets finish our app</a>
+### <a href="https://jsbin.com/xuxavejuqe/edit?html,js,output">Lets finish our app</a>
 
 ~120 lines of CSS, ~30 lines of JS.
 
 <aside class="notes">
 (Pat)
-
-@TODO review, clone demo to new URL
 </aside>
 
 ---
@@ -698,8 +675,6 @@ require([
 
 <aside class="notes">
 (Pat)
-
-@TODO review
 </aside>
 
 ---
@@ -708,8 +683,6 @@ require([
 
 <aside class="notes">
 (Pat)
-
-@TODO review
 </aside>
 
 ---
@@ -725,23 +698,19 @@ require([
 
 <aside class="notes">
 (Pat)
-
-@TODO review
 </aside>
 
 ---
 
 ## Types of tools
 
-* Modules - formats for splitting up and sharing code
-* Compilers - Transform often adding extra features
+* Modules - Formats for splitting up and sharing code
+* Compilers - Transform code often adding extra features
 * Bundlers - Combine modules and other assets
 * Frameworks - Architecture and structure for large apps/teams
 
 <aside class="notes">
 (Pat)
-
-@TODO review
 </aside>
 
 ---
@@ -750,13 +719,11 @@ require([
 
 * Modules - *JS Modules*, *AMD*, CommonJS, CSS Modules
 * Compilers - Babel, TypeScript, SASS, LESS
-* Bundlers - WebPack, *Parcel*, Rollup
+* Bundlers - WebPack, Parcel, Rollup
 * Frameworks - React, Angular, Vue, Ember, Dojo, Tailwind, Bootstrap
 
 <aside class="notes">
 (Pat)
-
-@TODO review
 </aside>
 
 ---
@@ -765,15 +732,13 @@ require([
 
 ## Node JS and NPM
 
-* [Node JS](https://nodejs.org/en/) - Run JavaScript on a server or desktop. Build web servers, APIs and CLI tools
+* [Node JS](https://nodejs.org/en/) - Run JavaScript on a server or desktop. Build web servers, APIs and CLI tools.
 * [NPM](https://www.npmjs.com/) - Package manager and distribution system for JS code. Analogous to Pip or Conda in Python.
 
 [Learn Node JS at NodeSchool](https://nodeschool.io/)
 
 <aside class="notes">
 (Pat)
-
-@TODO review
 </aside>
 
 ---
@@ -791,8 +756,6 @@ require([
 
 <aside class="notes">
 (Pat)
-
-@TODO review
 </aside>
 
 ---
@@ -811,8 +774,6 @@ require([
 
 <aside class="notes">
 (Pat)
-
-@TODO review
 </aside>
 
 ---
