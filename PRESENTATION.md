@@ -2,7 +2,7 @@
 
 <h1 style="text-align: left; font-size: 80px; margin-top: -90px;"><b>JavaScript</b> and <b>CSS</b> <i>for Geographers</i></h1>
     <p style="text-align: left; font-size: 1.5em;">Patrick Arlt, Allison Davis & Nate Bedortha</p>
-    <p style="text-align: left; font-size: 1.5em;">Slides: <a href="http://bit.ly/2T4zaKJ" style="font-family: monospace;">http://bit.ly/2PLJft4</a>
+    <p style="text-align: left; font-size: 1.5em;">Slides: <a href="http://bit.ly/2PLJft4" style="font-family: monospace;">http://bit.ly/2PLJft4</a>
 
 <aside class="notes">
 (Allison, Nate, Pat)
@@ -34,7 +34,7 @@ Designed to help you keep learning beyond this talk.
 
 Pretty much everything is a link.
 
-Slides <a href="http://bit.ly/2T4zaKJ" style="font-family: monospace;">http://bit.ly/2PLJft4</a>
+Slides <a href="http://bit.ly/2PLJft4" style="font-family: monospace;">http://bit.ly/2PLJft4</a>
 
 <aside class="notes">
 (Allison)
@@ -783,7 +783,7 @@ require([
 
 <br><br><br><br><br><br><br><br><br><br><br><br>
 
-Slides at <a href="http://bit.ly/2T4zaKJ" style="font-family: monospace;">http://bit.ly/2PLJft4</a>
+Slides at <a href="http://bit.ly/2PLJft4" style="font-family: monospace;">http://bit.ly/2PLJft4</a>
 
 <aside class="notes">
 (Pat)
