@@ -4,11 +4,23 @@
     <p style="text-align: left; font-size: 1.5em;">Patrick Arlt, Allison Davis & Nate Bedortha</p>
     <p style="text-align: left; font-size: 1.5em;">Slides: <a href="http://bit.ly/2T4zaKJ" style="font-family: monospace;">http://bit.ly/2PLJft4</a>
 
+<aside class="notes">
+(Allison, Nate, Pat)
+
+@TODO verify names and slide link
+</aside>
+
 ---
 
 <!-- .slide: data-background="./img/2020/devsummit/bg-4.png" -->
 
 ## This talk is all fundamentals.
+
+<aside class="notes">
+(Allison)
+
+@TODO review
+</aside>
 
 ---
 
@@ -23,6 +35,12 @@ Designed to help you keep learning beyond this talk.
 Pretty much everything is a link.
 
 Slides <a href="http://bit.ly/2T4zaKJ" style="font-family: monospace;">http://bit.ly/2PLJft4</a>
+
+<aside class="notes">
+(Allison)
+
+@TODO review, check slide link
+</aside>
 
 ---
 
@@ -40,6 +58,12 @@ You're more equipped than you think!
 
 Don't Feel Overwhelmed!
 
+<aside class="notes">
+(Allison)
+
+@TODO review
+</aside>
+
 ---
 
 <!-- .slide: data-background="./img/2020/devsummit/bg-4.png" -->
@@ -51,12 +75,23 @@ Don't Feel Overwhelmed!
 * Install Node > Terminal/Command Line/Windows Bash/Powershell > `npx http-server .`
 * HTML CSS and JS all go in your web server
 
+<aside class="notes">
+(Allison)
+
+@TODO make demo html (codepen/stack blizt), review slide, potentially split to more slides html demo/server/ect...
+</aside>
 
 ---
 
 <!-- .slide: data-background="./img/2020/devsummit/bg-4.png" -->
 
 ## CSS
+
+<aside class="notes">
+(Nate)
+
+@TODO review
+</aside>
 
 ---
 
@@ -74,6 +109,12 @@ Don't Feel Overwhelmed!
   ```
 * In the `<head>` tag of your `.html` files.
 
+<aside class="notes">
+(Nate)
+
+@TODO review
+</aside>
+
 ---
 
 <!-- .slide: data-background="./img/2020/devsummit/bg-2.png" -->
@@ -85,6 +126,12 @@ Don't Feel Overwhelmed!
   width: 100%;
   height: 100%;
 }</code></pre>
+
+<aside class="notes">
+(Nate)
+
+@TODO review
+</aside>
 
 ---
 
@@ -98,6 +145,12 @@ Styles _cascade_ into the final styles for the HTML elements that match their se
 * <code>&lt;link rel="stylesheet"&gt;</code>
 * <code>&lt;style&gt;</code> tags
 * Style attributes <code>&lt;div style="..."&gt;</code>
+
+<aside class="notes">
+(Nate)
+
+@TODO review
+</aside>
 
 ---
 
@@ -115,6 +168,12 @@ When properties collide specificity determines which property wins.
    2. `.class-attribute` - &lt;div class="..."&gt;
    3. `div` - &lt;div&gt;
 
+<aside class="notes">
+(Nate)
+
+@TODO review
+</aside>
+
 ---
 
 <!-- .slide: data-background="./img/2020/devsummit/bg-2.png" -->
@@ -125,6 +184,12 @@ Right click on something you want to change click "Inspect Element"
 
 [Explore a Storymap](https://story.maps.arcgis.com/apps/Cascade/index.html?appid=46daf1304a0c4ad69a8935c7ed2ab692)
 
+<aside class="notes">
+(Nate)
+
+@TODO review
+</aside>
+
 ---
 
 <!-- .slide: data-background="./img/2020/devsummit/bg-6.png" -->
@@ -132,6 +197,12 @@ Right click on something you want to change click "Inspect Element"
 ## Lets Build an App!
 
 <img src="app.png" alt="A Simple Mapping App" style="border: none; background: transparent; box-shadow: none;">
+
+<aside class="notes">
+(Nate)
+
+@TODO review
+</aside>
 
 ---
 
@@ -146,6 +217,12 @@ Right click on something you want to change click "Inspect Element"
   <li><a href="http://learnlayout.com/display.html">Learn CSS Layout: the "display" property</a></li>
 </ul>
 
+<aside class="notes">
+(Nate)
+
+@TODO review, clone demos to new URLs, review link resources
+</aside>
+
 ---
 
 <!-- .slide: data-background="./img/2020/devsummit/bg-2.png" -->
@@ -157,6 +234,12 @@ Right click on something you want to change click "Inspect Element"
   <li><a href="https://css-tricks.com/the-lengths-of-css/">The Lengths of CSS</a></li>
   <li><a href="http://www.quirksmode.org/css/units-values/">Unit and Values - QuirksMode</a></li>
 </ul>
+
+<aside class="notes">
+(Nate)
+
+@TODO review, clone demos to new URLs, review link resources
+</aside>
 
 ---
 
@@ -173,6 +256,12 @@ Right click on something you want to change click "Inspect Element"
   <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes">Using CSS flexible boxes</a></li>
 </ul>
 
+<aside class="notes">
+(Nate)
+
+@TODO review, clone demos to new URLs, review link resources
+</aside>
+
 ---
 
 <!-- .slide: data-background="./img/2020/devsummit/bg-2.png" -->
@@ -188,7 +277,14 @@ Right click on something you want to change click "Inspect Element"
 
 </ul>
 
-<p><a href="http://jsbin.com/zuwarus/edit?html,output">Bonus Demo: CSS Grid Template Areas</a></p>
+<p><a href="http://jsbin.com/zuwarus/edit?html,output">Bonus Demo: CSS 
+Grid Template Areas</a></p>
+
+<aside class="notes">
+(Nate)
+
+@TODO review, clone demos to new URLs, review link resources
+</aside>
 
 ---
 
@@ -202,6 +298,12 @@ Right click on something you want to change click "Inspect Element"
   <li><a href="https://css-tricks.com/snippets/css/media-queries-for-standard-devices/">Media Queries for Standard Devices</a></li>
   <li><a href="http://learnlayout.com/media-queries.html">Learn CSS Layout: media queries</a></li>
 </ul>
+
+<aside class="notes">
+(Nate)
+
+@TODO review, clone demos to new URLs, review link resources
+</aside>
 
 ---
 
@@ -237,6 +339,12 @@ Right click on something you want to change click "Inspect Element"
   <li><a href="http://www.colourlovers.com/palettes">Color Lovers</a></li>
 </ul>
 
+<aside class="notes">
+(Nate)
+
+@TODO condense to 1 slide, new combined demo, review link resources
+</aside>
+
 ---
 <!-- .slide: data-background="./img/2020/devsummit/bg-2.png" -->
 
@@ -247,11 +355,23 @@ Right click on something you want to change click "Inspect Element"
   <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position">position</a></li>
 </ul>
 
+<aside class="notes">
+(Nate)
+
+@TODO review, clone demos to new URLs, review link resources
+</aside>
+
 ---
 
 <!-- .slide: data-background="./img/2020/devsummit/bg-2.png" -->
 
 ## JavaScript
+
+<aside class="notes">
+(Allison)
+
+@TODO review
+</aside>
 
 ---
 
@@ -268,6 +388,12 @@ Right click on something you want to change click "Inspect Element"
   <script src="app.js"></script>
   ```
 * In your browsers DevTools
+
+<aside class="notes">
+(Allison)
+
+@TODO review
+</aside>
 
 ---
 
@@ -330,6 +456,12 @@ true || somethingFalsy
 > false
 ```
 
+<aside class="notes">
+(Allison)
+
+@TODO condense to 1 slide
+</aside>
+
 ---
 
 <!-- .slide: data-background="./img/2020/devsummit/bg-2.png" -->
@@ -353,6 +485,12 @@ age => {
 age => age * 7
 // these are the same!
 ```
+
+<aside class="notes">
+(Allison)
+
+@TODO review
+</aside>
 
 ---
 
@@ -393,11 +531,23 @@ dog.ageInDogYears(dog.age);
 > 49
 ```
 
+<aside class="notes">
+(Allison)
+
+@TODO condense to 1 slide
+</aside>
+
 ---
 
 <!-- .slide: data-background="./img/2020/devsummit/bg-4.png" -->
 
 ## JavaScript Patterns
+
+<aside class="notes">
+(Pat)
+
+@TODO review
+</aside>
 
 ---
 
@@ -412,6 +562,12 @@ dog.ageInDogYears(dog.age);
 * "Callback functions" define thing that happen *later*
 
 [Event Loop and Callbacks Demo](http://jsbin.com/bezusuk/edit?js,console)
+
+<aside class="notes">
+(Pat)
+
+@TODO review, clone demo to new url
+</aside>
 
 ---
 
@@ -443,6 +599,12 @@ Promises represent values that will be set in the future.
 i.e. _I `Promise` to be a useful value in the future._
 
 [Demo](http://jsbin.com/qisiki/edit?js,console)
+
+<aside class="notes">
+(Pat)
+
+@TODO review, clone demo to new URL
+</aside>
 
 ---
 
@@ -483,6 +645,12 @@ This is the future: as you learn JavaScript, you will encounter this more often.
 
 [Demo](https://stackblitz.com/edit/js-7duku9)
 
+<aside class="notes">
+(Pat)
+
+@TODO review, clone demo to new URL
+</aside>
+
 ---
 
 <!-- .slide: data-background="./img/2020/devsummit/bg-2.png" -->
@@ -502,11 +670,23 @@ require([
 
 [Demo](https://jsbin.com/hococib/edit?html,js,output)
 
+<aside class="notes">
+(Pat)
+
+@TODO review, clone demo to new URL
+</aside>
+
 ---
 
 ### <a href="http://jsbin.com/gixaro/13/edit?html,output">Lets finish our app</a>
 
 ~120 lines of CSS, ~30 lines of JS.
+
+<aside class="notes">
+(Pat)
+
+@TODO review, clone demo to new URL
+</aside>
 
 ---
 
@@ -516,9 +696,21 @@ require([
 
 [Chaining Promises JS API Sample](https://developers.arcgis.com/javascript/latest/sample-code/sandbox/index.html?sample=chaining-promises)
 
+<aside class="notes">
+(Pat)
+
+@TODO review
+</aside>
+
 ---
 
 ## Tools & Frameworks
+
+<aside class="notes">
+(Pat)
+
+@TODO review
+</aside>
 
 ---
 
@@ -531,6 +723,12 @@ require([
 * Too many tools === Lots of complexity to manage
 * Don't touch tools until you feel limited
 
+<aside class="notes">
+(Pat)
+
+@TODO review
+</aside>
+
 ---
 
 ## Types of tools
@@ -540,6 +738,12 @@ require([
 * Bundlers - Combine modules and other assets
 * Frameworks - Architecture and structure for large apps/teams
 
+<aside class="notes">
+(Pat)
+
+@TODO review
+</aside>
+
 ---
 
 ## Examples of tools
@@ -548,6 +752,12 @@ require([
 * Compilers - Babel, TypeScript, SASS, LESS
 * Bundlers - WebPack, *Parcel*, Rollup
 * Frameworks - React, Angular, Vue, Ember, Dojo, Tailwind, Bootstrap
+
+<aside class="notes">
+(Pat)
+
+@TODO review
+</aside>
 
 ---
 
@@ -560,6 +770,12 @@ require([
 
 [Learn Node JS at NodeSchool](https://nodeschool.io/)
 
+<aside class="notes">
+(Pat)
+
+@TODO review
+</aside>
+
 ---
 
 <!-- .slide: data-background="./img/2020/devsummit/bg-2.png" -->
@@ -570,7 +786,14 @@ require([
 * Prototype with [CodePen](https://codepen.io), [JSBin](https://jsbin.com) or [StackBlitz](https://stackblitz.com/)
 * [Visual Studio Code](https://code.visualstudio.com/)
 * [Chrome Developer Tools](https://developers.google.com/web/tools/chrome-devtools/javascript/)
+* [Firefox Developer Tools](https://developer.mozilla.org/en-US/docs/Tools)
 * [ArcGIS JS CLI](https://github.com/Esri/arcgis-js-cli)
+
+<aside class="notes">
+(Pat)
+
+@TODO review
+</aside>
 
 ---
 
@@ -586,6 +809,12 @@ require([
 * [Command Line Power User](https://commandlinepoweruser.com/)
 * [Front End Handbook](https://frontendmasters.com/books/front-end-handbook/2018/)
 
+<aside class="notes">
+(Pat)
+
+@TODO review
+</aside>
+
 ---
 
 <!-- .slide: data-background="./img/2020/devsummit/bg-rating.png" -->
@@ -594,3 +823,9 @@ require([
 <br><br><br><br><br><br><br><br><br><br><br><br>
 
 Slides at <a href="http://bit.ly/2T4zaKJ" style="font-family: monospace;">http://bit.ly/2PLJft4</a>
+
+<aside class="notes">
+(Pat)
+
+@TODO review, check slide link
+</aside>
