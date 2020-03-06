@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Esri Leaflet Routing</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet-routing-machine@3.2.5/dist/leaflet-routing-machine.css"
+    />
+    <style>
+      html {
+        font-family: sans-serif;
+        font-size: 11pt;
+      }
+
+      .map {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+
+      .results {
+        background-color: white;
+        opacity: 0.8;
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        width: 320px;
+        height: 480px;
+        overflow-y: scroll;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="map" class="map"></div>
+    <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine@3.2.5"></script>
+    <script src="https://unpkg.com/leaflet-control-geocoder@1.5.4"></script>
+    <!-- Load Esri Leaflet from CDN -->
+    <script
+      src="https://unpkg.com/esri-leaflet@2.3.3/dist/esri-leaflet.js"
+      integrity="sha512-cMQ5e58BDuu1pr9BQ/eGRn6HaR6Olh0ofcHFWe5XesdCITVuSBiBZZbhCijBe5ya238f/zMMRYIMIIg1jxv4sQ=="
+      crossorigin=""
+    ></script>
+    <script src="./lrm-esri.js"></script>
+    <script>
+      var map = L.map("map");
+
+      L.esri.basemapLayer("Streets").addTo(map);
+
+      var control = L.Routing.control({
+        waypoints: [
+          L.latLng(33.82585005, -116.53796823301772),
+          L.latLng(33.813647599999996, -117.91971592742885)
+        ],
+        router: L.Routing.esri({
+          liveTraffic: true,
+          profile: "Driving",
+          serviceUrl:
+            "https://utility.arcgis.com/usrsvcs/appservices/xgPIb7ppsXY9hzSw/rest/services/World/Route/NAServer/Route_World/"
+        }),
+        geocoder: L.Control.Geocoder.nominatim(),
+        routeWhileDragging: true,
+        reverseWaypoints: true
+      }).addTo(map);
+
+      L.Routing.errorControl(control).addTo(map);
+    </script>
+  </body>
+</html>

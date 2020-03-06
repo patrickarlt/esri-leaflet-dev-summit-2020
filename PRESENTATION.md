@@ -3,11 +3,7 @@
 <h1 style="text-align: left; font-size: 80px; margin-top: -90px;"><i>Building apps</i> with <b>Esri Leaflet</b></h1>
     <p style="text-align: left; font-size: 1.5em;">Patrick Arlt</p>
     <p style="text-align: left; font-size: 1.5em;">Slides: <a href="http://bit.ly/2TrH54j" style="font-family: monospace;">http://bit.ly/2TrH54j</a>
-
-<aside class="notes">
-(Pat)
-</aside>
-
+    
 ---
 
 ## What is Leaflet?
@@ -56,14 +52,15 @@ A plugin for Leaflet that simplifies integrating ArcGIS services into Leaflet.
 
 ## Why use the JS API instead
 
+* Vastly more capabilities
 * Web GL Visualization (performance)
+* Widgets
+* 3d
 * Tighter integration with ArcGIS
   * Renderers
   * Web Maps
   * Identity
   * Editing
-* Widgets
-* 3d
 
 ---
 
@@ -73,33 +70,49 @@ A plugin for Leaflet that simplifies integrating ArcGIS services into Leaflet.
 
 ## Just Leaflet
 
-Tile Layer, Point, Line, Polygon, Popup
+Tile Layer, Point, Line, Polygon, Popup.
+
+[Demo](./demos/just-leaflet.html)
 
 ---
 
 ## w/ Esri Leaflet
 
-Tile Layer, Feature Layer, Search
+Tile Layer, Feature Layer, Search.
+
+[Demo](./demos/basic-esri-leaflet.html)
 
 ---
 
 ## Map Service w/ Esri Leaflet
 
-Esri Leaflet DynamicMapLayer = JS API's MapImageLayer 
+Esri Leaflet DynamicMapLayer = JS API's MapImageLayer.
+
+[Demo](./demos/esri-leaflet-map-service.html)
 
 ---
 
 ## Clustering w/ a plugin
 
+Cluster markers to reduce noise and improve performance.
+
+[Demo](./demos/clustering.html)
+
 ---
 
 ## Editing w/ a plugin
+
+Integrate Esri Leaflet with Leaflet editing plugins.
+
+[Demo](./demos/editing.html)
 
 ---
 
 ## Mix with other libraries
 
-Using Ceder for charting
+Using and integrate other non mapping libraries like Ceder for charting.
+
+[Demos](./demos/charting.html)
 
 ---
 
@@ -107,11 +120,15 @@ Using Ceder for charting
 
 OSRM (Open Source Route Machine)
 
+[Demo](./demos/route-machine.html)
+
 ---
 
 ## Other Leaflet plugins (part 2)
 
-Dynamic Labeling
+Dynamic Labeling with Label Gun
+
+[Demo](./demos/labeling.html) 
 
 ---
 
@@ -127,17 +144,17 @@ Dynamic Labeling
 
 ## Getting Help
 
-* Docs
-* GitHub
+* [Docs and examples](https://esri.github.io/esri-leaflet/)
+* [GitHub Issues (Last resort, please!)](https://github.com/Esri/esri-leaflet)
 
 ---
 
 ## Esri Leaflet in 2020
 
-* Vector Tile support (Demo)
+* Vector Tile support ([Demo](https://codepen.io/patrickarlt/pen/wvwoKmr))
 * Improved caching for Feature Layers
 * Continued small updates and fixes
-* Clearer speration of offical, community and experimental plugins
+* Clearer separation of official, community and experimental plugins
 
 ---
 

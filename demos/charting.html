@@ -1,0 +1,213 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Dynamic feature charting with Chart.js</title>
+    <meta
+      name="viewport"
+      content="initial-scale=1,maximum-scale=1,user-scalable=no"
+    />
+
+    <!-- Load Leaflet from CDN -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+      integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+      integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+      crossorigin=""
+    ></script>
+
+    <!-- Load Esri Leaflet from CDN -->
+    <script
+      src="https://unpkg.com/esri-leaflet@2.3.3/dist/esri-leaflet.js"
+      integrity="sha512-cMQ5e58BDuu1pr9BQ/eGRn6HaR6Olh0ofcHFWe5XesdCITVuSBiBZZbhCijBe5ya238f/zMMRYIMIIg1jxv4sQ=="
+      crossorigin=""
+    ></script>
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      #map {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Load Chart.js from CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+
+    <style>
+      .chart-container {
+        height: 245px;
+        width: 245px;
+      }
+
+      #info-pane {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 400;
+        padding: 1em;
+        background: white;
+      }
+    </style>
+
+    <div id="map"></div>
+    <div id="info-pane" class="leaflet-bar chart-container">
+      <canvas id="chartCanvas"></canvas>
+    </div>
+
+    <script>
+      // STEP 1: MAKE A MAP AND ADD LAYERS
+      var map = L.map("map").setView([45.526, -122.667], 13);
+
+      L.esri.basemapLayer("Topographic").addTo(map);
+
+      // create and add a feature layer
+      // features from this layer will appear in the Chart.js scatterplot
+      var treesFeatureLayer = L.esri.featureLayer({
+        url:
+          "https://www.portlandmaps.com/arcgis/rest/services/Public/Parks_Misc/MapServer/21/"
+      });
+
+      treesFeatureLayer.addTo(map);
+
+      // STEP 2: DEFINE A CHART
+      // this is a static scatterplot chart definition for now, but it will
+      // soon become dynamic by responding to map and feature layer events
+      var initialChartData = {
+        datasets: [
+          {
+            label: "Portland Heritage Trees",
+            // the data values are empty at this moment
+            // and will be updated dynamically below
+            data: []
+          }
+        ]
+      };
+
+      var chartOptions = {
+        scales: {
+          xAxes: [
+            {
+              scaleLabel: {
+                display: true,
+                labelString: "tree diameter"
+              },
+              ticks: {
+                beginAtZero: true,
+                max: 250,
+                stepSize: 50
+              }
+            }
+          ],
+          yAxes: [
+            {
+              scaleLabel: {
+                display: true,
+                labelString: "tree height"
+              },
+              ticks: {
+                beginAtZero: true,
+                max: 250,
+                stepSize: 50
+              }
+            }
+          ]
+        },
+        maintainAspectRatio: false,
+        // turn off animations during chart data updates
+        animation: {
+          duration: 0
+        },
+        // see STEP 4 below
+        onHover: handleChartHover
+      };
+
+      var chart = new Chart("chartCanvas", {
+        type: "scatter",
+        data: initialChartData,
+        options: chartOptions
+      });
+
+      // STEP 3: MAKE THE CHART DYNAMIC BY ESTABLISHING MAP-TO-CHART COMMUNICATION
+      // show in the scatterplot only the features in the map's current extent
+      // by handling several events from both the map and feature layer
+      map.on("zoom move", updateChart);
+      treesFeatureLayer.on("load", updateChart);
+
+      function updateChart() {
+        // reformat the features' attributes of interest into
+        // the data array format required by the Chart.js scatterplot
+        var scatterPlotDataArray = [];
+
+        treesFeatureLayer.eachActiveFeature(function(e) {
+          // loop over each active feature in the map extent and
+          // push an object into the scatterPlotDataArray in this format:
+
+          // {
+          //   x: diameter attribute value,
+          //   y: height attribute value,
+          //   featureId: unique ID for chart-to-map communication in STEP 4
+          // }
+
+          scatterPlotDataArray.push({
+            x: e.feature.properties.DIAMETER,
+            y: e.feature.properties.HEIGHT,
+            featureId: e.feature.id
+          });
+        });
+
+        // assign the new scatterPlotDataArray to the chart's data property
+        chart.data.datasets[0].data = scatterPlotDataArray;
+
+        // finally, instruct the chart to re-draw itself with the new data
+        chart.update();
+      }
+
+      // STEP 4 (OPTIONAL): ESTABLISH CHART-TO-MAP COMMUNICATION
+      // up until now the map and feature layer inform the chart what to render,
+      // but interactions with the chart can also influence the map contents
+      function handleChartHover(e) {
+        var chartHoverData = chart.getElementsAtEvent(e);
+
+        if (!chartHoverData.length) {
+          // if there were no data elements found when hovering over the chart,
+          // reset any previous styling overrides and return
+          treesFeatureLayer.eachFeature(function(e) {
+            e.setOpacity(1);
+            e.setZIndexOffset(0);
+          });
+
+          return;
+        }
+
+        // otherwise, bring attention to the features on the map
+        // that are currently being hovered over in the chart
+        var hoverFeatureIds = chartHoverData.map(function(datum) {
+          return chart.data.datasets[0].data[datum._index].featureId;
+        });
+
+        treesFeatureLayer.eachFeature(function(e, idx) {
+          if (hoverFeatureIds.indexOf(e.feature.id) > -1) {
+            e.setOpacity(1);
+            e.setZIndexOffset(10000);
+          } else {
+            e.setOpacity(0.1);
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
