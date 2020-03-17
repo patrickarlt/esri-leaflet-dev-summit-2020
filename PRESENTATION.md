@@ -4,6 +4,7 @@
     <p style="text-align: left; font-size: 1.5em;">Patrick Arlt</p>
     <p style="text-align: left; font-size: 1.5em;">Slides: <a href="http://bit.ly/2TrH54j" style="font-family: monospace;">http://bit.ly/2TrH54j</a>
     
+
 ---
 
 ## What is Leaflet?
@@ -157,9 +158,5 @@ Dynamic Labeling with Label Gun
 * Clearer separation of official, community and experimental plugins
 
 ---
-
-<!-- .slide: data-background="./img/2020/devsummit/bg-rating.png" -->
-
-<br><br><br><br><br><br><br><br><br><br><br><br>
 
 Slides at <a href="http://bit.ly/2TrH54j" style="font-family: monospace;">http://bit.ly/2TrH54j</a>
